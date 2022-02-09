@@ -5,7 +5,8 @@
   - If a cell is living and has 2 || 3 neighbors, it will remain alive
   - Any cell not matching above criteria should die/remain dead
 
-to start the simulation, run `iex -S mix` and create initial cell(s) by calling `Cell.sow({x, y})`
+to start the simulation, run `iex -S mix` and start call `Universe.Supervisor(_,_)` 
+cell(s) can be added by calling `Cell.sow({x, y})`
 observe the interaction of processes by calling `:observer.start`
 
 ## What is happening?
