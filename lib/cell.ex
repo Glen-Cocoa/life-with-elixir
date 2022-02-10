@@ -27,12 +27,12 @@ defmodule Cell do
 
   # tells supervisor which cells to terminate
   def reap(process) do
-    DynamicSupervisor.terminate_child(Cell.Supervisor, process)
+    Supervisor.terminate_child(Cell.Supervisor, process)
   end
 
   # tells supervisor which cells to start
   def sow(position) do
-    DynamicSupervisor.start_child(Cell.Supervisor, [position])
+    Supervisor.start_child(Cell.Supervisor, [position])
   end
 
   # advances to next frame
