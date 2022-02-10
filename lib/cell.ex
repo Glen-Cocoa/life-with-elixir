@@ -85,7 +85,7 @@ defmodule Cell do
 
   # handles count_neighbors event
   # returns tuple with count of neighbors and current position
-  def handle_call(:count_neighbors, _from, position) do
+  def handle_call({:count_neighbors}, _from, position) do
     {:reply, do_count_neighbors(position), position}
   end
 
